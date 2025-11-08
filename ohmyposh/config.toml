@@ -1,0 +1,30 @@
+console_title_template = "{{.UserName}}@{{.HostName}} {{.PWD}}"
+version = 3
+final_space = true
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    type = 'text'
+    style = 'plain'
+    background = 'transparent'
+    foreground = '#ca9ee6'
+    template = '{{ .UserName }}@{{ .HostName }}'
+
+  [[blocks.segments]]
+    type = 'path'
+    style = 'plain'
+    background = 'transparent'
+    foreground = '#ca9ee6'     
+
+    [blocks.segments.properties]
+	style = 'full'
+
+  [[blocks.segments]]
+  type = 'text'
+  style = 'plain'
+  background = 'transparent'
+  foreground = '#ca9ee6'
+  template = '>'
